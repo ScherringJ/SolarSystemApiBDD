@@ -6,6 +6,7 @@ import spring.scherring.solarsytembddapi.dao.PlaneteRepository;
 import spring.scherring.solarsytembddapi.model.Planete;
 
 @RestController
+@CrossOrigin("http://localhost:8081/")
 public class PlaneteController {
 
     @Autowired
