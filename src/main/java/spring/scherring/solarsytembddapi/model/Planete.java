@@ -57,6 +57,18 @@ public class Planete {
         this.type = type;
     }
 
+    public boolean valide() {
+        boolean bool = true;
+        if (this.name == null || this.name.equals("")) {
+            bool = false;
+        } else if (this.discovery == null || this.discovery.equals("")) {
+            bool = false;
+        } else if (this.type == null || this.type.equals("")) {
+            bool = false;
+        }
+        return bool;
+    }
+
     @Override
     public String toString() {
         return "Planete{" +

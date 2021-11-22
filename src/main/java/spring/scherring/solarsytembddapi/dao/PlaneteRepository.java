@@ -8,6 +8,4 @@ public interface PlaneteRepository extends CrudRepository<Planete, Integer> {
    Planete findById(int id);
 
    void deleteById(int id);
-
-
 }

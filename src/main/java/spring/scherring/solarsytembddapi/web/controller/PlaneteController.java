@@ -29,6 +29,20 @@ public class PlaneteController {
 
     @PostMapping(value = "/Planete")
     public void addPlanete(@RequestBody Planete planete) {
-        dao.save(planete);
+        if (planete.valide()) {
+            dao.save(planete);
+        }
     }
+
+    @PutMapping(value = "/Planete/{id}")
+    public void updatePlanete(@RequestBody Planete planete, @PathVariable("id") int id) {
+        Planete planete1 = this.getPlanete(id);
+        planete1.setName(planete.getName());
+        planete1.setDiscovery(planete.getDiscovery());
+        planete1.setType(planete.getType());
+        if (planete1.valide()) {
+            dao.save(planete1);
+        }
+    }
+
 }
