@@ -1,5 +1,5 @@
 <template>
-  <button type="button" class="btn btn-outline-success" @click="formWritting()"> {{(edit)?"Modifier":"Ajouter"}} </button>
+  <button type="button" class="btn btn-outline-success" @click="formWritting()"> {{(edit)?"Modify":"Add"}} </button>
   <div class="modalperso" v-show="showForm" @click="showForm=false">
   <form class="modal-content" @click="formControl">
     <div class="form-group">
@@ -17,7 +17,7 @@
       <input type="text" v-model="type" class="form-control" id="type" placeholder="Enter Type">
     </div>
     <div class="">
-    <button type="button" @click="postPlanete()" class="btn btn-primary"> Valider </button>
+    <button type="button" @click="postPlanete()" class="btn btn-primary"> Validate </button>
     </div>
   </form>
   </div>

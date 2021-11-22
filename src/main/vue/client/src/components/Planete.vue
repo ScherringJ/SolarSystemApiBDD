@@ -6,12 +6,12 @@
         {{ id }}
       </option>
     </select>
-    <button type="button" @click="getPlanete(selected)" class="btn btn-outline-info">Rechercher</button>
+    <button type="button" @click="getPlanete(selected)" class="btn btn-outline-info">Get</button>
     <table class="table table-striped">
       <thead>
         <th> Planete ID </th>
-        <th> Planete name </th>
-        <th> Planete Discovery </th>
+        <th> Planete Name </th>
+        <th> Planete discovery </th>
         <th> Planete type </th>
       </thead>
       <tr v-for="planete in planetes" v-bind:key = "planete.id">

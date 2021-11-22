@@ -1,4 +1,4 @@
-# hello-wolrd
+# Planete Api Front
 
 ## Project setup
 ```
@@ -7,7 +7,7 @@ npm install
 
 ### Compiles and hot-reloads for development
 ```
-npm run serve
+npm run serve -- --port 8081
 ```
 
 ### Compiles and minifies for production

@@ -21,20 +21,12 @@ public class SolarSytemBddApiApplication {
     @Bean
     public CommandLineRunner demo(PlaneteRepository planeteRepository) {
         return (args) -> {
+            /*
             planeteRepository.save(new Planete(1, "Venus", "Antiquite", "Tellurique"));
             planeteRepository.save(new Planete(2, "Jupiter", "Antiquite", "Gazeuse"));
             planeteRepository.save(new Planete(3, "Mars", "Antiquite", "Tellurique"));
-            planeteRepository.save(new Planete(4, "Saturn", "Antiquite", "Gazeuse"));
+            planeteRepository.save(new Planete(4, "Saturn", "Antiquite", "Gazeuse")); */
 
-
-            log.info("Affichage de toute les planètes ------- (findAll) --------");
-            for (Planete planete : planeteRepository.findAll()) {
-                log.info(planete.toString());
-            }
-
-             log.info("Affichage d'une seul photo ------- (findByID) --------");
-             Planete planete = planeteRepository.findById(2);
-             log.info(planete.toString());
         };
     }
 }

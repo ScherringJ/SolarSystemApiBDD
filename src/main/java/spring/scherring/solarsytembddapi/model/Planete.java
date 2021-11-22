@@ -1,19 +1,24 @@
 package spring.scherring.solarsytembddapi.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import org.springframework.stereotype.Component;
+
+import javax.persistence.*;
 
 @Entity
+@Table(name = "planete")
 public class Planete {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
+    @Column(name = "name")
     private String name;
+
+    @Column(name = "discovery")
     private String discovery;
+
+    @Column(name = "type")
     private String type;
 
     protected Planete() {}
